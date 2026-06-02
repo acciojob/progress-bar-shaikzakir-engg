@@ -1,16 +1,29 @@
-<!DOCTYPE html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="sizeInfo">
+      <h1>
+        Width: <span id="width">1000</span> and Height:
+        <span id="height">1000</span>
+      </h1>
+    </div>
+    <script>
+      const height = document.getElementById("height");
+      const width = document.getElementById("width");
 
-<html>
-
-<head>
-	<link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
-
-</body>
-
+      function updateDimensions() {
+        width.innerText = window.innerWidth;
+        height.innerText = window.innerHeight;
+      }
+      updateDimensions();
+      window.addEventListener("resize", function () {
+        updateDimensions();
+      });
+    </script>
+  </body>
 </html>
