@@ -3,27 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Progress Bar</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="sizeInfo">
-      <h1>
-        Width: <span id="width">1000</span> and Height:
-        <span id="height">1000</span>
-      </h1>
+    <div class="container">
+      <button id="previous">Prev</button>
+      <div class="progress-bar">
+        <div class="line"></div>
+        <div class="line-fill" id="line-fill"></div>
+        <div class="circle active" id="circle-1">1</div>
+        <div class="circle" id="circle-2">2</div>
+        <div class="circle" id="circle-3">3</div>
+        <div class="circle" id="circle-4">4</div>
+        <div class="circle" id="circle-5">5</div>
+      </div>
+      <button id="next">Next</button>
     </div>
-    <script>
-      const height = document.getElementById("height");
-      const width = document.getElementById("width");
 
-      function updateDimensions() {
-        width.innerText = window.innerWidth;
-        height.innerText = window.innerHeight;
-      }
-      updateDimensions();
-      window.addEventListener("resize", function () {
-        updateDimensions();
-      });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
